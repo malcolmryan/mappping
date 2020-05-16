@@ -1,0 +1,10 @@
+
+Mapping/Library/
+
+Mapping/.vscode/
+
+Mapping/Logs/
+
+Mapping/Temp/
+
+*.sln
