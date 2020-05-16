@@ -8,7 +8,6 @@ public class PlayerMove : MonoBehaviour
     new private Rigidbody2D rigidbody;
 
     public float speed = 5;
-    public float sightRadius = 10;
 
     // Start is called before the first frame update
     void Start()
