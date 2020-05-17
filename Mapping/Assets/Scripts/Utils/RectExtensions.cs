@@ -105,6 +105,10 @@ public static class RectExtensions  {
 		return r;
 	}
 
-
+	public static void DrawGizmo(this Rect r) {
+		for (int i = 0; i < 4; i++) {
+			Gizmos.DrawLine(r.Corner(i), r.Corner(i+1));
+		}
+	}
 }
 }
