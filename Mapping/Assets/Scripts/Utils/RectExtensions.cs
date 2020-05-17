@@ -56,7 +56,6 @@ public static class RectExtensions  {
 		return v;
 	}
 
-
 	/**
 	 * Pick a point inside the rect
 	 */
@@ -70,6 +69,17 @@ public static class RectExtensions  {
 		return v;
 	}
 
+	/**
+	 * Get the indices for a point on the rectangle 
+	 */
+	public static Vector2 InversePoint(this Rect r, Vector2 p)
+	{
+		Vector2 v;
+		v.x = (p.x - r.xMin) / r.width;
+		v.y = (p.y - r.yMin) / r.height;
+
+		return v;
+	}
 
 	/**
 	 * Pick a random point inside the rect
