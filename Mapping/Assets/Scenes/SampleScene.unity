@@ -659,6 +659,13 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
+  rect:
+    serializedVersion: 2
+    x: -50
+    y: -50
+    width: 100
+    height: 100
+  texture: {fileID: 0}
 --- !u!1001 &5771733118920339888
 PrefabInstance:
   m_ObjectHideFlags: 0

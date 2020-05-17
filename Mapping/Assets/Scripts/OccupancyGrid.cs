@@ -8,8 +8,8 @@ public class OccupancyGrid {
     public int size = 1024;
     public Rect rect;
 
-    public float logOddsEmpty;
-    public float logOddsFull;
+    public float logOddsEmpty = 1;
+    public float logOddsFull = 1;
     
     private float[,] occupancy;
 
@@ -35,12 +35,12 @@ public class OccupancyGrid {
         end = rect.InversePoint(end);
 
         Vector2 p = start;
-        IVector2 ij = new IVector(p);
+        IVector2 ij = new IVector2(p);
         IVector2 stop = new IVector2(end);
 
         Vector2 d = end - start;
-        int dx = Mathf.Sign(d.x);
-        int dy = Mathf.Sign(d.y);
+        int dx = (int)Mathf.Sign(d.x);
+        int dy = (int)Mathf.Sign(d.y);
 
         while (ij != stop) {
             SetOccupied(ij, false);
