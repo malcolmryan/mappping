@@ -23,6 +23,18 @@ public struct IVector2  {
         this.y = Mathf.FloorToInt(v.y);
     }
 
+    public static bool operator ==(IVector2 iv1, IVector2 iv2) {
+        return iv1.Equals(iv2);
+    }
+    public static bool operator !=(IVector2 iv1, IVector2 iv2) {
+        return !iv1.Equals(iv2);
+    }
+
+    override public bool Equals(object o) {
+        IVector2 iv = (IVector2)o;
+        return (iv.x == x) && (iv.y == y);
+    }
+
     public override string ToString() => $"({x}, {y})";
 }
 }
